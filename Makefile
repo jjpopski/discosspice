@@ -21,7 +21,7 @@ clean:
 	rm -f  *.o lib/*.a 
 	
 test:  lib SolarSystemBodyEphem.o  gtestexample.o
-	$(CC) -o TestSolSysEphem -I/usr/local/include  gtestexample.o  discosspice.a $(CSPICELIBPATH)/cspice.a $(CFLAGS_TEST) 
+	$(CC) -o TestSolSysEphem -I/usr/local/include  gtestexample.o  lib/discosspice.a $(CSPICELIBPATH)/cspice.a $(CFLAGS_TEST) 
 	
 
 
