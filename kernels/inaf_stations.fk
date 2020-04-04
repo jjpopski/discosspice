@@ -1,0 +1,229 @@
+KPL/FK
+ 
+   FILE: inaf_stations.fk
+ 
+   This file was created by PINPOINT.
+ 
+   PINPOINT Version 3.2.0 --- September 6, 2016
+   PINPOINT RUN DATE/TIME:    2017-05-24T15:20:33
+   PINPOINT DEFINITIONS FILE: inaf_stations.def
+   PINPOINT PCK FILE:         earth_latest_high_prec.bpc
+   PINPOINT SPK FILE:         inaf_stations.bsp
+ 
+   The input definitions file is appended to this
+   file as a comment block.
+ 
+ 
+   Body-name mapping follows:
+ 
+\begindata
+ 
+   NAIF_BODY_NAME                      += 'SRT'
+   NAIF_BODY_CODE                      += 1400000
+ 
+   NAIF_BODY_NAME                      += 'MEDICINA'
+   NAIF_BODY_CODE                      += 1400001
+ 
+   NAIF_BODY_NAME                      += 'NOTO'
+   NAIF_BODY_CODE                      += 1400002
+ 
+\begintext
+ 
+ 
+   Reference frame specifications follow:
+ 
+ 
+   Topocentric frame SRT_TOPO
+ 
+      The Z axis of this frame points toward the zenith.
+      The X axis of this frame points North.
+ 
+      Topocentric frame SRT_TOPO is centered at the
+      site SRT, which has Cartesian coordinates
+ 
+         X (km):                  0.4865183387100E+04
+         Y (km):                  0.7919222163000E+03
+         Z (km):                  0.4035135967700E+04
+ 
+      and planetodetic coordinates
+ 
+         Longitude (deg):         9.2451446614998
+         Latitude  (deg):        39.4930610538431
+         Altitude   (km):         0.6717195338769E+00
+ 
+      These planetodetic coordinates are expressed relative to
+      a reference spheroid having the dimensions
+ 
+         Equatorial radius (km):  6.3781366000000E+03
+         Polar radius      (km):  6.3567519000000E+03
+ 
+      All of the above coordinates are relative to the frame ITRF93.
+ 
+ 
+\begindata
+ 
+   FRAME_SRT_TOPO                      =  2400000
+   FRAME_2400000_NAME                  =  'SRT_TOPO'
+   FRAME_2400000_CLASS                 =  4
+   FRAME_2400000_CLASS_ID              =  2400000
+   FRAME_2400000_CENTER                =  1400000
+ 
+   OBJECT_1400000_FRAME                =  'SRT_TOPO'
+ 
+   TKFRAME_2400000_RELATIVE            =  'ITRF93'
+   TKFRAME_2400000_SPEC                =  'ANGLES'
+   TKFRAME_2400000_UNITS               =  'DEGREES'
+   TKFRAME_2400000_AXES                =  ( 3, 2, 3 )
+   TKFRAME_2400000_ANGLES              =  (   -9.2451446614998,
+                                             -50.5069389461569,
+                                             180.0000000000000 )
+ 
+ 
+\begintext
+ 
+   Topocentric frame MEDICINA_TOPO
+ 
+      The Z axis of this frame points toward the zenith.
+      The X axis of this frame points North.
+ 
+      Topocentric frame MEDICINA_TOPO is centered at the
+      site MEDICINA, which has Cartesian coordinates
+ 
+         X (km):                  0.4461400788600E+04
+         Y (km):                  0.9195935209000E+03
+         Z (km):                  0.4449504710500E+04
+ 
+      and planetodetic coordinates
+ 
+         Longitude (deg):        11.6468140175127
+         Latitude  (deg):        44.5199568190326
+         Altitude   (km):         0.5041696983336E-01
+ 
+      These planetodetic coordinates are expressed relative to
+      a reference spheroid having the dimensions
+ 
+         Equatorial radius (km):  6.3781366000000E+03
+         Polar radius      (km):  6.3567519000000E+03
+ 
+      All of the above coordinates are relative to the frame ITRF93.
+ 
+ 
+\begindata
+ 
+   FRAME_MEDICINA_TOPO                 =  2400001
+   FRAME_2400001_NAME                  =  'MEDICINA_TOPO'
+   FRAME_2400001_CLASS                 =  4
+   FRAME_2400001_CLASS_ID              =  2400001
+   FRAME_2400001_CENTER                =  1400001
+ 
+   OBJECT_1400001_FRAME                =  'MEDICINA_TOPO'
+ 
+   TKFRAME_2400001_RELATIVE            =  'ITRF93'
+   TKFRAME_2400001_SPEC                =  'ANGLES'
+   TKFRAME_2400001_UNITS               =  'DEGREES'
+   TKFRAME_2400001_AXES                =  ( 3, 2, 3 )
+   TKFRAME_2400001_ANGLES              =  (  -11.6468140175127,
+                                             -45.4800431809674,
+                                             180.0000000000000 )
+ 
+ 
+\begintext
+ 
+   Topocentric frame NOTO_TOPO
+ 
+      The Z axis of this frame points toward the zenith.
+      The X axis of this frame points North.
+ 
+      Topocentric frame NOTO_TOPO is centered at the
+      site NOTO, which has Cartesian coordinates
+ 
+         X (km):                  0.4934528565900E+04
+         Y (km):                  0.1321262306800E+04
+         Z (km):                  0.3806479567300E+04
+ 
+      and planetodetic coordinates
+ 
+         Longitude (deg):        14.9898092186301
+         Latitude  (deg):        36.8761095752109
+         Altitude   (km):         0.1266094545620E+00
+ 
+      These planetodetic coordinates are expressed relative to
+      a reference spheroid having the dimensions
+ 
+         Equatorial radius (km):  6.3781366000000E+03
+         Polar radius      (km):  6.3567519000000E+03
+ 
+      All of the above coordinates are relative to the frame ITRF93.
+ 
+ 
+\begindata
+ 
+   FRAME_NOTO_TOPO                     =  2400002
+   FRAME_2400002_NAME                  =  'NOTO_TOPO'
+   FRAME_2400002_CLASS                 =  4
+   FRAME_2400002_CLASS_ID              =  2400002
+   FRAME_2400002_CENTER                =  1400002
+ 
+   OBJECT_1400002_FRAME                =  'NOTO_TOPO'
+ 
+   TKFRAME_2400002_RELATIVE            =  'ITRF93'
+   TKFRAME_2400002_SPEC                =  'ANGLES'
+   TKFRAME_2400002_UNITS               =  'DEGREES'
+   TKFRAME_2400002_AXES                =  ( 3, 2, 3 )
+   TKFRAME_2400002_ANGLES              =  (  -14.9898092186301,
+                                             -53.1238904247891,
+                                             180.0000000000000 )
+ 
+\begintext
+ 
+ 
+Definitions file inaf_stations.def
+--------------------------------------------------------------------------------
+ 
+begindata
+ 
+ 
+SITES += ( 'SRT','MEDICINA','NOTO')
+ 
+SRT_CENTER=399
+SRT_IDCODE=1400000
+SRT_FRAME='ITRF93'
+SRT_XYZ= (4865.18338710,
+          791.92221630,
+          4035.13596770)
+SRT_EPOCH = @2000-JAN-01/00:00:00
+SRT_UP     = 'Z'
+SRT_NORTH  = 'X'
+ 
+MEDICINA_CENTER=399
+MEDICINA_IDCODE=1400001
+MEDICINA_FRAME='ITRF93'
+MEDICINA_XYZ= (4461.40078860,
+          919.59352090,
+           4449.5047105)
+MEDICINA_EPOCH = @2000-JAN-01/00:00:00
+MEDICINA_UP     = 'Z'
+MEDICINA_NORTH  = 'X'
+ 
+NOTO_CENTER=399
+NOTO_IDCODE=1400002
+NOTO_FRAME='ITRF93'
+NOTO_XYZ= (4934.52856590,
+          1321.26230680,
+           3806.4795673)
+NOTO_EPOCH = @2000-JAN-01/00:00:00
+NOTO_UP     = 'Z'
+NOTO_NORTH  = 'X'
+ 
+ 
+begintext
+ 
+SRT ITRF93
+SRT_DXYZ=(0.02105,0.02227,0.01762)
+MED 4461400.78860  919593.52090 4449504.71050 -0.02441  0.02307  0.01332
+NOTO 4934528.56590 1321262.30680 3806479.56730 -0.02381  0.02122  0.01728
+ 
+begintext
+ 
+[End of definitions file]
+ 

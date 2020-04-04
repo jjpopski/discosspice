@@ -1,0 +1,104 @@
+KPL/FK
+ 
+   FILE: srt.fk
+ 
+   This file was created by PINPOINT.
+ 
+   PINPOINT Version 3.2.0 --- September 6, 2016
+   PINPOINT RUN DATE/TIME:    2017-05-18T14:05:45
+   PINPOINT DEFINITIONS FILE: srt.def
+   PINPOINT PCK FILE:         pck00010.tpc
+   PINPOINT SPK FILE:         srt.bsp
+ 
+   The input definitions file is appended to this
+   file as a comment block.
+ 
+ 
+   Body-name mapping follows:
+ 
+\begindata
+ 
+   NAIF_BODY_NAME                      += 'SRT'
+   NAIF_BODY_CODE                      += 399072
+ 
+\begintext
+ 
+ 
+   Reference frame specifications follow:
+ 
+ 
+   Topocentric frame SRT_TOPO
+ 
+      The Z axis of this frame points toward the zenith.
+      The X axis of this frame points North.
+ 
+      Topocentric frame SRT_TOPO is centered at the
+      site SRT, which has Cartesian coordinates
+ 
+         X (km):                  0.4865183387100E+04
+         Y (km):                  0.7919222163000E+03
+         Z (km):                  0.4035135967700E+04
+ 
+      and planetodetic coordinates
+ 
+         Longitude (deg):         9.2451446614998
+         Latitude  (deg):        39.4930610538431
+         Altitude   (km):         0.6717195338769E+00
+ 
+      These planetodetic coordinates are expressed relative to
+      a reference spheroid having the dimensions
+ 
+         Equatorial radius (km):  6.3781366000000E+03
+         Polar radius      (km):  6.3567519000000E+03
+ 
+      All of the above coordinates are relative to the frame ITRF93.
+ 
+ 
+\begindata
+ 
+   FRAME_SRT_TOPO                      =  1399072
+   FRAME_1399072_NAME                  =  'SRT_TOPO'
+   FRAME_1399072_CLASS                 =  4
+   FRAME_1399072_CLASS_ID              =  1399072
+   FRAME_1399072_CENTER                =  399072
+ 
+   OBJECT_399072_FRAME                 =  'SRT_TOPO'
+ 
+   TKFRAME_1399072_RELATIVE            =  'ITRF93'
+   TKFRAME_1399072_SPEC                =  'ANGLES'
+   TKFRAME_1399072_UNITS               =  'DEGREES'
+   TKFRAME_1399072_AXES                =  ( 3, 2, 3 )
+   TKFRAME_1399072_ANGLES              =  (   -9.2451446614998,
+                                             -50.5069389461569,
+                                             180.0000000000000 )
+ 
+\begintext
+ 
+ 
+Definitions file srt.def
+--------------------------------------------------------------------------------
+ 
+begindata
+ 
+ 
+SITES = ( 'SRT')
+ 
+SRT_CENTER=399
+SRT_IDCODE=399072
+SRT_FRAME='ITRF93'
+SRT_XYZ= (4865.18338710,
+          791.92221630,
+          4035.13596770)
+SRT_EPOCH = @2000-JAN-01/00:00:00
+SRT_UP     = 'Z'
+SRT_NORTH  = 'X'
+ 
+begintext
+ 
+SRT ITRF93
+SRT_DXYZ=(0.02105,0.02227,0.01762)
+ 
+begintext
+ 
+[End of definitions file]
+ 
