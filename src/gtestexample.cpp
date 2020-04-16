@@ -6,8 +6,15 @@
  
 class EphemTest : public ::testing::Test {
  protected:
+  
+
+     SolarSystemBodyEphem solsys;
      
-     SolarSystemBodyEphem solsys= SolarSystemBodyEphem();
+     EphemTest()
+  {
+  
+     solsys= SolarSystemBodyEphem();
+  }   
 
   virtual void SetUp() {
       

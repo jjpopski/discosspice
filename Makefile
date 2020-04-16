@@ -15,7 +15,7 @@ lib: SolarSystemBodyEphem.o
 	
 
 ssbody:  SolarSystemBodyEphem.o   main.o 
-	$(CC)  -o SolarSystemBodyEphem      main.o discosspice.a $(CSPICELIBPATH)cspice.a -I/mnt/d/Work/Cspice_2014/cspice/include
+	$(CC)  -o SolarSystemBodyEphem      main.o lib/discosspice.a $(CSPICELIBPATH)cspice.a -I/mnt/d/Work/Cspice_2014/cspice/include
 
 clean:
 	rm -f  *.o lib/*.a 
