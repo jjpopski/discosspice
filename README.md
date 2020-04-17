@@ -11,13 +11,21 @@ Requirements
 
 * [Cspice toolkit]( https://naif.jpl.nasa.gov/naif/toolkit.html).
 * [Google testing suite]( https://github.com/google/googletest) 
-* [JPL DE430](https://naif.jpl.nasa.gov/pub/naif/generic_kernels/spk/planets/de430.bsp)
 
-Optional kernels:
-*  [Solar System satellites kernels](https://naif.jpl.nasa.gov/pub/naif/generic_kernels/spk/satellites/)
+Required kernels can be dowoloaded [NASA NAIF Spacecrapts and Planets Kernels page](https://naif.jpl.nasa.gov/pub/naif/generic_kernels/spk/)
+
+*  [JPL DE432](https://naif.jpl.nasa.gov/pub/naif/generic_kernels/spk/planets/de432s.bsp)  
+*  [Mars](https://naif.jpl.nasa.gov/pub/naif/generic_kernels/spk/satellites/mar097.bsp)
+*  [Jupiter](https://naif.jpl.nasa.gov/pub/naif/generic_kernels/spk/satellites/jup343.bsp)
+*  [Saturn](https://naif.jpl.nasa.gov/pub/naif/generic_kernels/spk/satellites/sat427.bsp)
+*  [Uranus](https://naif.jpl.nasa.gov/pub/naif/generic_kernels/spk/satellites/ura111.bsp)
+*  [Neptune](https://naif.jpl.nasa.gov/pub/naif/generic_kernels/spk/satellites/nep086.bsp)
+*  [Pluto](https://naif.jpl.nasa.gov/pub/naif/generic_kernels/spk/satellites/plu055.bsp)
+
 
 
 ## Test installation
+
 
 Export evnvironment variable to locate cspice library:
 ```console

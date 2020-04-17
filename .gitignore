@@ -4,3 +4,5 @@ TestSolSysEphem
 SolarSystemBodyEphem
 *swp
 *.txt
+*~
+kernel/*

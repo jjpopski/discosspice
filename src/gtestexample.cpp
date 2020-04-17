@@ -77,11 +77,7 @@ TEST_F(EphemTest,setBodyName){
 TEST_F(EphemTest,ititialize)
 {
       int r;
-//       SolarSystemBodyEphem solsys= SolarSystemBodyEphem();
       
-  //    ASSERT_EXIT (solsys.initializeKernel("../inaf_kernels.txt"),
-                                      //        ::testing::ExitedWithCode(1),"");
-  //     ASSERT_EQ(1,solsys.initializeKernel("../inaf_kernels.txtccc"));
        ASSERT_EQ(0,solsys.initializeKernel("inaf_kernels.txt",r));
        ASSERT_EQ(14,r);
        
@@ -93,7 +89,7 @@ TEST_F(EphemTest,getPosition){
        
 //        SolarSystemBodyEphem solsys= SolarSystemBodyEphem();
        solsys.setObserverLocation("SRT");
-       solsys.setBodyByName("Saturn");
+       solsys.setBodyByName("Saturn BARYCENTER ");
        
        solsys.getPosititionRange(2457836.500000000,et,ra,dec,range);
        EXPECT_NEAR(267.207118370,ra,2.7e-5);
