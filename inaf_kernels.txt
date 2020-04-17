@@ -1,0 +1,46 @@
+KPL/MK
+\begindata 
+      
+  
+PATH_VALUES  = ( 'kernels')   
+ 
+PATH_SYMBOLS = ( 'A')
+KERNELS_TO_LOAD= ('$A/de430.bsp', 
+        '$A/naif0012.tls',
+        '$A/pck00010.tpc',
+        '$A/inaf_stations.bsp',
+        '$A/inaf_stations.fk',   
+        '$A/earth_assoc_itrf93.tf',
+        '$A/earthstns_itrf93_050714.bsp', 
+        '$A/earthstns_fx_050714.bsp', 
+        '$A/earth_latest_high_prec.bpc', 
+        '$A/earth_070425_370426_predict.bpc',
+        '$A/earth_topo_050714.tf')
+       
+       
+\begintext 
+ 
+         PATH_VALUES  = ( 'kernels') set kernel path relatively to the application
+
+         Here are the SPICE kernels required for my application 
+         program. 
+ 
+         Note that kernels are loaded in the order listed. Thus we 
+         need to list the highest priority kernel last. 
+ 
+ 
+        'de432s.bsp'                           JPL planetary ephemeris
+        'naif0012.tls'                         Leap Second 
+        'pck00010.tpc'                         orientation and size/shape data for natural bodies.
+        'inaf_stations.bsp'                    Inaf Stations positions
+        'inaf_stations.fk'                     Inaf Stations definitions 
+        'earth_assoc_itrf93.tf'
+        'earthstns_itrf93_050714.bsp' 
+        'earthstns_fx_050714.bsp' 
+        'earth_latest_high_prec.bpc' 
+        'earth_070425_370426_predict.bpc'
+        'earth_topo_050714.tf'
+ 
+ 
+ 
+ 
