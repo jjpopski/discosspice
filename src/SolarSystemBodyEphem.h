@@ -26,14 +26,11 @@ public:
   std::string getBodyName();
   int getBodyId(){return m_bodyid;};
   int initializeKernel (std::string, int&);
-  
-
-/*
+  int addKernel(std::string);
+  std::string spiceToolkitVersion();
    
 
-*/
- std::string spiceToolkitVersion();
-
+ 
 
   
 private: 

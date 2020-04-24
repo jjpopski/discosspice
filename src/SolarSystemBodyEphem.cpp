@@ -1,6 +1,7 @@
 #include "SolarSystemBodyEphem.h"
 #define LENOUT 32
 #define  MSGLEN         1841
+ #include "SpiceUsr.h"
 
 #include <string.h> 
 SolarSystemBodyEphem::SolarSystemBodyEphem()
@@ -21,6 +22,28 @@ SolarSystemBodyEphem::~SolarSystemBodyEphem()
 int SolarSystemBodyEphem::initializeKernel (std::string kernel_file,int& total_kernel)
 {
     
+// Debug    
+
+      #define  FILLEN   256
+      #define  TYPLEN   33
+      #define  SRCLEN   256
+
+      SpiceInt        which;
+      SpiceInt        count;
+      SpiceInt        handle;
+
+      SpiceChar       file  [FILLEN];
+      SpiceChar       filtyp[TYPLEN];
+      SpiceChar       source[SRCLEN];
+            SpiceBoolean    found;
+
+//end debug
+      
+    
+    
+    
+    
+    
     SpiceChar               msg [ MSGLEN ];
     SpiceChar               action[LENOUT];
     
@@ -29,7 +52,27 @@ int SolarSystemBodyEphem::initializeKernel (std::string kernel_file,int& total_k
     std::cout << "Action err: "<< action << std::endl; 
     furnsh_c (kernel_file.c_str());   // load kernels from metakernel kernel_file
     ktotal_c ( "ALL", &total_kernel );    // counts all loaded kernels
- 
+    
+    
+    
+    
+     if ( total_kernel == 0 )
+            {
+            printf ( "No SPK files loaded at this time.\n" );
+            }
+         else
+            {
+            printf ( "The loaded SPK files are: \n\n" );
+            }
+    
+         for (int  which = 0;  which < total_kernel;  which++ )
+            {
+                
+            kdata_c ( which,  "ALL",    FILLEN,   TYPLEN, SRCLEN, 
+                      file,   filtyp,  source,  &handle,  &found ); 
+            printf ( "%s\n",  file   );
+            }
+
  
     if ( failed_c() ) 
       {
@@ -166,5 +209,19 @@ std::string SolarSystemBodyEphem::getBodyName()
    return std::string(versn);
 
 }
+
+
+
+int SolarSystemBodyEphem::addKernel(std::string kernel)
+{
+    int total_kernel;
+    
+     
+    furnsh_c (kernel.c_str());   // load kernels from metakernel kernel_file
+    ktotal_c ( "ALL", &total_kernel );
+    return total_kernel;
+    
+}
+
 
 

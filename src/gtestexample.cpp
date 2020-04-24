@@ -5,8 +5,11 @@
 #include <iostream>
  
 class EphemTest : public ::testing::Test {
- protected:
   
+
+  protected:
+  
+  int loadedKernel;
 
      SolarSystemBodyEphem solsys;
      
@@ -29,11 +32,11 @@ class EphemTest : public ::testing::Test {
 
    
 
-TEST_F(EphemTest,versionTest){
-    std::string toolkit_version;
-     EXPECT_STREQ("CSPICE_N0065",solsys.spiceToolkitVersion().c_str());
- 
-}
+// TEST_F(EphemTest,versionTest){
+//     std::string toolkit_version;
+//      EXPECT_STREQ("CSPICE_N0065",solsys.spiceToolkitVersion().c_str());
+//  
+// }
 
 
 
@@ -54,7 +57,7 @@ TEST_F(EphemTest,setBodyById){
 
 TEST_F(EphemTest,setObserverLocation)
 {
-//       SolarSystemBodyEphem solsys= SolarSystemBodyEphem();
+
       solsys.setObserverLocation("SRT");
       ASSERT_STRCASEEQ("SRT",solsys.getObserverLocation().c_str());
 
@@ -78,8 +81,8 @@ TEST_F(EphemTest,ititialize)
 {
       int r;
       
-       ASSERT_EQ(0,solsys.initializeKernel("inaf_kernels.txt",r));
-       ASSERT_EQ(14,r);
+       ASSERT_EQ(0,solsys.initializeKernel("inaf_kernels.txt",loadedKernel));
+       ASSERT_EQ(12,loadedKernel);
        
       
 }
@@ -89,7 +92,7 @@ TEST_F(EphemTest,getPosition){
        
 //        SolarSystemBodyEphem solsys= SolarSystemBodyEphem();
        solsys.setObserverLocation("SRT");
-       solsys.setBodyByName("Saturn BARYCENTER ");
+       solsys.setBodyByName("Saturn Barycenter");
        
        solsys.getPosititionRange(2457836.500000000,et,ra,dec,range);
        EXPECT_NEAR(267.207118370,ra,2.7e-5);
@@ -103,6 +106,27 @@ TEST_F(EphemTest,getPosition){
      
 }
 
+
+TEST_F(EphemTest,addkernel){
+       double ra,dec,range,et;
+
+       solsys.setObserverLocation("SRT");
+       loadedKernel=solsys.addKernel("kernels/sat427.bsp");
+       solsys.setBodyByName("Saturn");
+       solsys.getPosititionRange(2457836.500000000,et,ra,dec,range);
+       EXPECT_NEAR(267.207118370,ra,2.7e-5);
+       EXPECT_NEAR(-22.081696425,dec,2.7e-5);
+       
+       solsys.getPosititionRange(2458932.500000000  ,et,ra,dec,range);
+       EXPECT_NEAR(302.046613001,ra,2.7e-5);
+       EXPECT_NEAR(-20.227066752,dec,2.7e-5);
+       
+       
+
+    
+    
+    
+}
 
 
 

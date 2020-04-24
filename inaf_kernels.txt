@@ -5,7 +5,7 @@ KPL/MK
 PATH_VALUES  = ( 'kernels')   
  
 PATH_SYMBOLS = ( 'A')
-KERNELS_TO_LOAD= ('$A/de430.bsp', 
+KERNELS_TO_LOAD= ('$A/de430_1850-2150.bsp', 
         '$A/naif0012.tls',
         '$A/pck00010.tpc',
         '$A/inaf_stations.bsp',
@@ -16,6 +16,8 @@ KERNELS_TO_LOAD= ('$A/de430.bsp',
         '$A/earth_latest_high_prec.bpc', 
         '$A/earth_070425_370426_predict.bpc',
         '$A/earth_topo_050714.tf')
+        
+        
        
        
 \begintext 
