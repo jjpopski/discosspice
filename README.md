@@ -14,12 +14,12 @@ Requirements
 
 Kernels can be dowoloaded [NASA NAIF Spacecrapts and Planets Kernels page](https://naif.jpl.nasa.gov/pub/naif/generic_kernels/spk/)
 
-Required:
+Required kernel:
 
 
 *  [JPL DE432](https://naif.jpl.nasa.gov/pub/naif/generic_kernels/spk/planets/de432s.bsp)  
 
-Optional:
+Optional kernels:
 
 *  [Mars](https://naif.jpl.nasa.gov/pub/naif/generic_kernels/spk/satellites/mar097.bsp)
 *  [Jupiter](https://naif.jpl.nasa.gov/pub/naif/generic_kernels/spk/satellites/jup343.bsp)
