@@ -5,4 +5,4 @@ SolarSystemBodyEphem
 *swp
 *.txt
 *~
-kernel/*
+./kernel/*
